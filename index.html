@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWITCH STATEMENT EXAMPLE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: lavenderblush;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <h1>Find the Day of the Week</h1>
+  <label>Enter a number (1-7):</label>
+  <input type="number" id="dayInput" placeholder="number between 1-7 only" min="1" max="7">
+  <button type="button" onclick="findDay()" class="btn btn-success">Get Day</button>
+
+  <h2 id="result"></h2>
+
+  <img src="aa.jpg" style="width:15cm;">
+</center>
+  <script>
+    function findDay() {
+      const dayNumber = parseInt(document.getElementById("dayInput").value);
+      let dayName;
+
+      switch (dayNumber) {
+        case 1:
+          dayName = "Monday";
+          break;
+        case 2:
+          dayName = "Tuesday";
+          break;
+        case 3:
+          dayName = "Wednesday";
+          break;
+        case 4:
+          dayName = "Thursday";
+          break;
+        case 5:
+          dayName = "Friday";
+          break;
+        case 6:
+          dayName = "Saturday";
+          break;
+        case 7:
+          dayName = "Sunday";
+          break;
+        default:
+          dayName = "Invalid input! Please enter a number between 1 and 7.";
+      }
+
+      document.getElementById("result").innerHTML = "The day is: " + dayName;
+    }
+
+  </script>
+</body>
+</html>
